@@ -7,7 +7,6 @@
 
     <flow name="inboundOrderFlow">
         <ibm-mq:listener config-ref="IBM_MQ_Config" destination="IN.ORDER.QUEUE">
-            <ibm-mq:reconnect frequency="40000" blocking="false"/>
         </ibm-mq:listener>
         <logger level="INFO" message="Received order: #[payload]"/>
     </flow>
